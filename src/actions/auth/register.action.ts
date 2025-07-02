@@ -57,8 +57,7 @@ export const registerUser = defineAction({
       if (firebaseError.code === "auth/email-already-in-use") {
         throw new Error("El correo ya está en uso");
       }
-      console.log(error);
-      console.log(firebaseError);
+
       throw new Error("Auxilio! algo salió mal");
     }
   },
